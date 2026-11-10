@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101c2a" />
+  <title>Iron Lotus — Night Market</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game"></div>
+  <div class="vignette"></div>
+  <div id="hud" class="hidden">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><div><b>IRON LOTUS</b><small>NIGHT MARKET DISTRICT</small></div></div>
+      <div class="district"><span class="live-dot"></span><span id="district-name">OLD TOWN</span><i>OPEN WORLD</i></div>
+      <div class="objective"><small>THE WAY OF THE LOTUS</small><b id="objective-text">Find the challengers</b></div>
+    </header>
+    <section class="status-panel">
+      <div class="stat-label"><span>VITALITY</span><b id="hp-text">100</b></div>
+      <div class="bar"><i id="hp-bar"></i></div>
+      <div class="stat-label spirit-label"><span>FOCUS</span><b id="focus-text">100</b></div>
+      <div class="bar focus-bar"><i id="focus-bar"></i></div>
+      <div class="roster"><strong id="score-count">0</strong><span> / 8<br/>CHALLENGERS</span></div>
+    </section>
+    <div id="toast" class="toast"></div>
+    <div class="bottom-hud">
+      <div class="controls-hint"><span>W A S D</span> MOVE <em>·</em> <span>SHIFT</span> DASH <em>·</em> <span>CLICK / SPACE</span> STRIKE <em>·</em> <span>E</span> GRAB <em>·</em> <span>R</span> TOSS</div>
+      <div class="minimap-frame"><canvas id="minimap" width="156" height="156"></canvas><span>N</span></div>
+    </div>
+  </div>
+  <div id="start-screen" class="screen">
+    <div class="start-card">
+      <div class="eyebrow"><span></span> A FREE-ROAMING MARTIAL ARTS ADVENTURE <span></span></div>
+      <h1>IRON<br/><i>LOTUS</i></h1>
+      <div class="subtitle">NIGHT MARKET</div>
+      <p>When the lanterns glow, the district belongs to those<br class="desktop-only"/> brave enough to walk its streets.</p>
+      <button id="start-button"><span>STEP INTO THE NIGHT</span><b>↗</b></button>
+      <div class="start-foot"><span>WASD TO MOVE</span><span>·</span><span>EXPLORE. SPAR. IMPROVISE.</span></div>
+    </div>
+    <div class="corner-note">DISTRICT 07 / 23:41</div>
+    <div class="start-bottom">A LANTERN-LIT SANDBOX <span>✦</span> YOUR PATH IS YOUR OWN</div>
+  </div>
+  <div id="pause-screen" class="screen hidden">
+    <div class="pause-card"><div class="eyebrow">THE CITY IS STILL AWAKE</div><h2>TAKE A BREATH</h2><p>Click to return to the district</p><button id="resume-button">RETURN TO THE STREETS <b>↗</b></button><div class="pause-controls">WASD MOVE &nbsp;·&nbsp; MOUSE LOOK &nbsp;·&nbsp; CLICK / SPACE STRIKE &nbsp;·&nbsp; E GRAB &nbsp;·&nbsp; R TOSS</div></div>
+  </div>
+  <div id="result-screen" class="screen hidden"><div class="pause-card"><div class="eyebrow">THE DISTRICT REMEMBERS</div><h2>IRON WILL.</h2><p>All eight challengers have been outclassed. The night is yours.</p><button id="continue-button">KEEP EXPLORING <b>↗</b></button></div></div>
+  <div id="mobile-controls" class="hidden">
+    <div class="touch-pad"><button data-move="up">▲</button><div><button data-move="left">◀</button><button data-move="down">▼</button><button data-move="right">▶</button></div></div>
+    <div class="touch-actions"><button id="touch-dash">DASH</button><button id="touch-grab">GRAB</button><button id="touch-attack" class="attack-touch">STRIKE</button><button id="touch-throw">TOSS</button></div>
+  </div>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
